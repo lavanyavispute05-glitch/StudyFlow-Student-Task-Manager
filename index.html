@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Student Task Manager</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+    <!-- =========================
+         Header
+    ========================== -->
+
+    <div class="header">
+
+        <div class="header-top">
+
+            <div>
+
+                <h1>Student Task Manager</h1>
+
+                <p id="welcomeMessage">
+                    Stay organized. Get things done.
+                </p>
+
+            </div>
+
+
+            <div class="header-actions">
+
+            
+
+                <button
+                    class="theme-btn"
+                    onclick="toggleDarkMode()"
+                >
+                    🌙
+                </button>
+
+                <button
+                    class="logout-btn"
+                    onclick="logout()"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         Add Task
+    ========================== -->
+
+    <div class="task-box">
+
+        <input
+            type="text"
+            id="taskInput"
+            placeholder="What do you need to do?"
+        >
+
+        <input
+            type="date"
+            id="taskDate"
+        >
+
+        <select id="taskPriority">
+
+            <option value="Low">
+                Low
+            </option>
+
+            <option value="Medium">
+                Medium
+            </option>
+
+            <option value="High">
+                High
+            </option>
+
+        </select>
+
+        <button onclick="addTask()">
+            Add Task
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         Task Section
+    ========================== -->
+
+    <div class="task-section">
+
+        <div id="todayReminder" class="today-reminder"></div>
+
+        <h2>Your Tasks</h2>
+
+
+        <!-- Statistics -->
+
+        <div class="task-stats">
+
+            <div class="stat-card">
+
+                <span id="totalTasks">
+                    0
+                </span>
+
+                <p>Total</p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span id="pendingTasks">
+                    0
+                </span>
+
+                <p>Pending</p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span id="completedTasks">
+                    0
+                </span>
+
+                <p>Completed</p>
+
+            </div>
+
+        </div>
+
+        <div class="progress-card">
+    <div class="progress-header">
+        <span>Today's Progress</span>
+        <strong id="todayProgressText">0 / 0</strong>
+    </div>
+
+    <div class="progress-bar">
+        <div
+            id="todayProgressBar"
+            class="progress-fill"
+        ></div>
+    </div>
+</div>
+
+
+        <!-- Search -->
+
+        <div class="task-search">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search tasks..."
+                oninput="searchTasks()"
+            >
+
+        </div>
+
+
+        <!-- Filters -->
+
+        <div class="task-filters">
+
+            <button
+                onclick="filterTasks('all')"
+                class="active"
+            >
+                All
+            </button>
+
+            <button
+                onclick="filterTasks('pending')"
+            >
+                Pending
+            </button>
+
+            <button
+                onclick="filterTasks('completed')"
+            >
+                Completed
+            </button>
+
+        </div>
+
+
+        <!-- Task List -->
+
+        <ul id="taskList"></ul>
+
+    </div>
+
+
+</div>
+
+
+<!-- =========================
+     Edit Task Modal
+========================== -->
+
+<div
+    id="editModal"
+    class="edit-modal"
+>
+
+    <div class="edit-modal-box">
+
+        <h2>Edit Task</h2>
+
+
+        <input
+            type="text"
+            id="editTaskText"
+            placeholder="Task name"
+        >
+
+
+        <input
+            type="date"
+            id="editTaskDate"
+        >
+
+
+        <select id="editTaskPriority">
+
+            <option value="Low">
+                Low
+            </option>
+
+            <option value="Medium">
+                Medium
+            </option>
+
+            <option value="High">
+                High
+            </option>
+
+        </select>
+
+
+        <div class="edit-modal-buttons">
+
+            <button
+                type="button"
+                onclick="closeEditModal()"
+            >
+                Cancel
+            </button>
+
+
+            <button
+                type="button"
+                onclick="saveEditedTask()"
+            >
+                Save Changes
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Toast -->
+
+<div id="toast" class="toast"></div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
