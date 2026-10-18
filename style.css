@@ -1505,3 +1505,1185 @@ body.dark-mode .edit-modal-buttons button:last-child {
     background: #f4b183;
     transition: width 0.3s ease;
 }
+
+
+
+
+
+
+body {
+    background: #F7F4FF !important;
+}
+
+
+/* ===== StudyFlow Lavender Theme ===== */
+
+:root {
+    --purple: #8B78D6;
+    --purple-dark: #7059C4;
+    --purple-light: #EAE4FF;
+    --background: #F7F4FF;
+    --card: #FFFFFF;
+    --border: #E8E1F5;
+    --muted: #817B91;
+    --text: #302B40;
+}
+
+/* Main page */
+body {
+    background: #F7F4FF !important;
+    color: #302B40;
+}
+
+/* Main container and sections */
+.container {
+    background: #FFFFFF !important;
+    border: 1px solid #E8E1F5;
+    border-radius: 20px;
+    box-shadow: 0 8px 28px rgba(112, 89, 196, 0.08);
+}
+
+.header,
+.task-box,
+.task-section,
+.task-stats,
+.stat-card {
+    border-color: #E8E1F5;
+}
+
+.task-box,
+.task-section,
+.stat-card {
+    border-radius: 16px;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #302B40;
+}
+
+/* Inputs and search */
+input,
+select,
+textarea,
+.task-search {
+    background-color: #FFFFFF;
+    color: #302B40;
+    border: 1px solid #DDD4F0;
+    border-radius: 10px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.task-search:focus {
+    outline: none;
+    border-color: #8B78D6;
+    box-shadow: 0 0 0 3px rgba(139, 120, 214, 0.15);
+}
+
+/* Primary buttons */
+button {
+    transition: background-color 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+button[type="submit"],
+#addTaskBtn,
+.add-task-btn {
+    background: #8B78D6;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+}
+
+button[type="submit"]:hover,
+#addTaskBtn:hover,
+.add-task-btn:hover {
+    background: #7059C4;
+    box-shadow: 0 4px 12px rgba(112, 89, 196, 0.2);
+}
+
+/* Statistics */
+.stat-card {
+    background: #F9F7FF;
+    border: 1px solid #E8E1F5;
+}
+
+.stat-card h2,
+.stat-card .stat-number {
+    color: #7059C4;
+}
+
+/* Task cards */
+#taskList > *,
+.task-item,
+.task-card {
+    border-color: #E8E1F5;
+    border-radius: 12px;
+}
+
+.task-item,
+.task-card {
+    background: #FFFFFF;
+}
+
+/* Filters */
+.task-filters button,
+.filter-btn {
+    border-radius: 9px;
+}
+
+.task-filters button.active,
+.filter-btn.active {
+    background: #EAE4FF;
+    color: #7059C4;
+    border-color: #D8CDF8;
+}
+
+/* Modal */
+.modal-content,
+.modal-container {
+    background: #FFFFFF;
+    border: 1px solid #E8E1F5;
+    border-radius: 18px;
+}
+
+/* Keyboard focus */
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #8B78D6;
+    outline-offset: 3px;
+}
+
+/* Mobile spacing */
+@media (max-width: 600px) {
+    .container {
+        border-radius: 14px;
+    }
+
+    .task-box,
+    .task-section,
+    .stat-card {
+        border-radius: 12px;
+    }
+}
+
+
+/* ===== StudyFlow Sidebar & Navigation ===== */
+
+.sidebar {
+    background: #ffffff;
+    border-right: 1px solid #e9e0f7;
+    box-shadow: 2px 0 12px rgba(95, 70, 140, 0.04);
+}
+
+.sidebar a,
+.sidebar button {
+    transition: all 0.2s ease;
+    border-radius: 10px;
+}
+
+/* Navigation hover */
+.sidebar a:hover,
+.sidebar button:hover {
+    background: #f1eaff;
+    color: #7550b5;
+}
+
+/* Active navigation item */
+.sidebar a.active,
+.sidebar button.active {
+    background: #e9ddff;
+    color: #6941a5;
+    font-weight: 600;
+}
+
+/* Dashboard headings */
+h1,
+h2,
+h3 {
+    color: #302747;
+}
+
+/* General text */
+p,
+label {
+    color: #625a70;
+}
+
+/* ===== StudyFlow Header Refinement ===== */
+
+.header {
+    background: #ffffff;
+    border: 1px solid #e8def8;
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 4px 16px rgba(105, 76, 150, 0.06);
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-btn,
+.logout-btn {
+    border: 1px solid #e3d6f8;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.theme-btn {
+    background: #f0e8ff;
+    color: #7048a8;
+}
+
+.logout-btn {
+    background: #ffffff;
+    color: #66536f;
+}
+
+.theme-btn:hover {
+    background: #e4d5ff;
+}
+
+.logout-btn:hover {
+    background: #f8f3ff;
+}
+
+/* ===== StudyFlow Statistics & Progress ===== */
+
+.task-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 22px;
+}
+
+.stat-card {
+    background: #ffffff;
+    border: 1px solid #e8def8;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 4px 14px rgba(105, 76, 150, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(105, 76, 150, 0.10);
+}
+
+.progress-card {
+    background: #ffffff;
+    border: 1px solid #e8def8;
+    border-radius: 16px;
+    padding: 22px;
+    margin-top: 20px;
+    box-shadow: 0 4px 14px rgba(105, 76, 150, 0.06);
+}
+
+.progress-bar {
+    background: #eee6fa;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, #b99bea, #8864ce);
+    border-radius: 999px;
+    transition: width 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    .task-stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .stat-card,
+    .progress-card {
+        padding: 17px;
+    }
+}
+
+
+/* ===== StudyFlow Task Form ===== */
+
+.task-box {
+    background: #ffffff;
+    border: 1px solid #e8def8;
+    border-radius: 18px;
+    padding: 24px;
+    margin-top: 22px;
+    box-shadow: 0 4px 16px rgba(105, 76, 150, 0.06);
+}
+
+#taskInput,
+#taskDate,
+#taskPriority,
+#searchInput {
+    box-sizing: border-box;
+    min-height: 44px;
+    padding: 11px 13px;
+    border: 1px solid #e2d6f4;
+    border-radius: 10px;
+    background: #fff;
+    color: #352b46;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+#taskInput:focus,
+#taskDate:focus,
+#taskPriority:focus,
+#searchInput:focus {
+    border-color: #a98add;
+    box-shadow: 0 0 0 3px rgba(169, 138, 221, 0.16);
+    outline: none;
+}
+
+#taskInput::placeholder,
+#searchInput::placeholder {
+    color: #a097b0;
+}
+
+
+/* ===== StudyFlow Task Filters ===== */
+
+.task-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 16px 0;
+}
+
+.task-filters button {
+    padding: 9px 16px;
+    border: 1px solid #e4d8f5;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #695b7b;
+    cursor: pointer;
+    transition: background 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.task-filters button:hover {
+    background: #f1e9ff;
+    border-color: #cdb8ee;
+}
+
+.task-filters button.active {
+    background: #e9ddff;
+    border-color: #c7aff0;
+    color: #6941a5;
+    font-weight: 600;
+}
+
+
+/* ===== StudyFlow Task List ===== */
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0 0;
+}
+
+#taskList > li {
+    background: #ffffff;
+    border: 1px solid #e8def8;
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+    box-shadow: 0 3px 12px rgba(105, 76, 150, 0.05);
+    transition: box-shadow 0.2s ease,
+                border-color 0.2s ease;
+}
+
+#taskList > li:hover {
+    border-color: #cdb8ee;
+    box-shadow: 0 6px 16px rgba(105, 76, 150, 0.10);
+}
+
+
+/* ===== StudyFlow Task Action Buttons ===== */
+
+#taskList > li > button {
+    min-width: 38px;
+    min-height: 38px;
+    margin: 10px 6px 0 0;
+    padding: 8px;
+    border: 1px solid #e7dcf7;
+    border-radius: 10px;
+    background: #f8f4ff;
+    cursor: pointer;
+    transition: background 0.2s ease,
+                transform 0.2s ease;
+}
+
+#taskList > li > button:hover {
+    background: #ece1ff;
+    transform: translateY(-2px);
+}
+
+#taskList > li > .complete-btn {
+    background: #e9f7ed;
+    border-color: #ccebd5;
+}
+
+#taskList > li > .complete-btn:hover {
+    background: #d8f1e0;
+}
+
+#taskList > li > .edit-btn:hover {
+    background: #e9ddff;
+}
+
+#taskList > li > .delete-btn:hover {
+    background: #fff0f0;
+    border-color: #f2cccc;
+}
+
+
+/* ===== StudyFlow Edit Task Modal ===== */
+
+.edit-modal {
+    background: rgba(40, 28, 58, 0.45);
+    backdrop-filter: blur(4px);
+    padding: 20px;
+}
+
+.edit-modal-box {
+    width: 100%;
+    max-width: 440px;
+    box-sizing: border-box;
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #e8def8;
+    border-radius: 20px;
+    box-shadow: 0 18px 55px rgba(52, 35, 78, 0.18);
+}
+
+#editTaskText,
+#editTaskDate,
+#editTaskPriority {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 44px;
+    margin: 8px 0 14px;
+    padding: 11px 13px;
+    border: 1px solid #e2d6f4;
+    border-radius: 10px;
+    background: #fdfbff;
+    color: #352b46;
+}
+
+#editTaskText:focus,
+#editTaskDate:focus,
+#editTaskPriority:focus {
+    outline: none;
+    border-color: #a98add;
+    box-shadow: 0 0 0 3px rgba(169, 138, 221, 0.16);
+}
+
+.edit-modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.edit-modal-buttons button {
+    min-height: 42px;
+    padding: 10px 18px;
+    border: 1px solid #e2d6f4;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.edit-modal-buttons button:hover {
+    background: #eee5ff;
+}
+
+/* ===== StudyFlow Toast Notifications ===== */
+
+#toast {
+    background: #352747;
+    color: #ffffff;
+    padding: 14px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(45, 30, 65, 0.18);
+    font-size: 14px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+}
+
+/* Keep notification text readable */
+#toast.show {
+    opacity: 1;
+}
+
+/* Mobile-friendly positioning */
+@media (max-width: 600px) {
+    #toast {
+        padding: 12px 16px;
+        font-size: 13px;
+    }
+}
+
+/* ===== StudyFlow Mobile Responsive UI ===== */
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 14px;
+        box-sizing: border-box;
+    }
+
+    .header {
+        padding: 18px;
+    }
+
+    .header-top {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .header-actions {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .task-stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .task-box {
+        padding: 16px;
+    }
+
+    .task-filters {
+        flex-wrap: wrap;
+    }
+
+    #taskList > li {
+        padding: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    #taskList > li > button {
+        margin-top: 8px;
+    }
+
+    .edit-modal-box {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+}
+
+
+/* ===== StudyFlow Two-Column Dashboard ===== */
+
+/* Keep the dashboard centered */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+/* Statistics stay in one horizontal row */
+.task-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+/* Add Task on the left, Your Tasks on the right */
+.container {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.7fr);
+    column-gap: 24px;
+    row-gap: 20px;
+    align-items: start;
+}
+
+/* Header stretches across both columns */
+.container > .header {
+    grid-column: 1 / -1;
+}
+
+/* Task form occupies the left column */
+.container > .task-box {
+    grid-column: 1;
+    grid-row: 2;
+    min-width: 0;
+}
+
+/* Main task section occupies the right column */
+.container > .task-section {
+    grid-column: 2;
+    grid-row: 2;
+    min-width: 0;
+}
+
+/* Keep form controls within their column */
+.task-box input,
+.task-box select {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Mobile: stack the columns when space is limited */
+@media (max-width: 760px) {
+    .container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        padding: 14px;
+        gap: 16px;
+    }
+
+    .container > .header,
+    .container > .task-box,
+    .container > .task-section {
+        grid-column: 1;
+        grid-row: auto;
+        min-width: 0;
+    }
+
+    .task-stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+}
+
+@media (max-width: 420px) {
+    .task-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== Dashboard Layout Refinement ===== */
+
+/* Add Task panel */
+.container > .task-box {
+    align-self: start;
+    padding: 24px;
+    border-radius: 18px;
+}
+
+/* Your Tasks panel */
+.container > .task-section {
+    align-self: start;
+    padding: 22px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid #e5d9fa;
+}
+
+/* Make section headings consistent */
+.task-section h2 {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+/* Arrange task form controls neatly */
+.task-box input,
+.task-box select {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+/* Keep statistics side by side */
+.task-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.stat-card {
+    min-width: 0;
+    padding: 16px;
+    border-radius: 14px;
+    box-sizing: border-box;
+}
+
+/* Keep search and filters compact */
+.task-search {
+    margin-bottom: 12px;
+}
+
+.task-filters {
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+/* Keep task cards readable */
+#taskList > li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    border-radius: 14px;
+}
+
+#taskList > li > div {
+    flex: 1 1 180px;
+    min-width: 0;
+}
+
+/* Tablet and mobile adjustments */
+@media (max-width: 760px) {
+    .container > .task-box,
+    .container > .task-section {
+        padding: 16px;
+    }
+
+    .task-stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .stat-card {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+    .task-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== Fix Add Task Panel Overlap ===== */
+
+.container > .task-box {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Keep all form controls inside the panel */
+.container > .task-box input,
+.container > .task-box select,
+.container > .task-box textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent the Add Task button from overflowing */
+.container > .task-box button {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Give the two dashboard columns enough room */
+.container {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.6fr);
+    column-gap: 20px;
+}
+
+/* Stack the panels on smaller screens */
+@media (max-width: 760px) {
+    .container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .container > .task-box,
+    .container > .task-section {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+/* ===== Fix Add Task Button ===== */
+
+.container > .task-box button {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    min-height: 46px;
+    padding: 12px 16px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 12px;
+    background: #7853b8;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.container > .task-box button:hover {
+    background: #64419e;
+    transform: translateY(-1px);
+}
+
+/* Give the form a little more breathing room */
+.container > .task-box {
+    padding: 24px;
+    overflow: visible;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 760px) {
+    .container > .task-box {
+        padding: 16px;
+    }
+}
+
+
+
+/* ===== StudyFlow: Clean Add Task Panel ===== */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.7fr);
+    gap: 28px;
+    align-items: start;
+}
+
+.container > .header {
+    grid-column: 1 / -1;
+}
+
+.container > .task-box {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #eee8f8;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(72, 48, 110, 0.06);
+}
+
+.container > .task-box input,
+.container > .task-box select {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    height: 48px;
+    padding: 0 14px;
+    border: 1px solid #e6e0ef;
+    border-radius: 10px;
+    background: #fff;
+    color: #30283b;
+    font: inherit;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.container > .task-box input[type="text"] {
+    cursor: text;
+    user-select: text;
+    -webkit-user-select: text;
+}
+
+.container > .task-box input:focus,
+.container > .task-box select:focus {
+    outline: none;
+    border-color: #9674cf;
+    box-shadow: 0 0 0 3px rgba(150, 116, 207, 0.12);
+}
+
+.container > .task-box button {
+    display: block;
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 18px;
+    margin: 0;
+    border: none;
+    border-radius: 11px;
+    background: #7853b8;
+    color: #fff;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    writing-mode: horizontal-tb;
+    white-space: normal;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    box-sizing: border-box;
+}
+
+.container > .task-box button:hover {
+    background: #67439f;
+    transform: translateY(-1px);
+}
+
+.container > .task-section {
+    min-width: 0;
+    width: 100%;
+}
+
+@media (max-width: 760px) {
+    body {
+        padding: 24px 14px;
+    }
+
+    .container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .container > .header,
+    .container > .task-box,
+    .container > .task-section {
+        grid-column: 1;
+        width: 100%;
+    }
+
+    .container > .task-box {
+        padding: 18px;
+    }
+}
+
+
+/* Keep task filters in one horizontal row */
+.task-filters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    min-width: 0;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.task-filters > * {
+    flex: 0 0 auto;
+}
+
+
+/* Keep All / Pending / Completed filters in one row */
+.task-section .task-filters {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    box-sizing: border-box;
+}
+
+.task-section .task-filters button {
+    display: inline-flex !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: max-content;
+    max-width: none;
+    white-space: nowrap;
+    writing-mode: horizontal-tb;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== Independent horizontal task filter row ===== */
+
+.task-section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 0;
+}
+
+.task-section .task-filters {
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    align-self: flex-start;
+    width: max-content;
+    max-width: 100%;
+    min-width: 0;
+    margin: 12px 0 20px;
+    padding: 0;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.task-section .task-filters button {
+    display: inline-flex !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: 75px;
+    max-width: none;
+    min-height: 40px;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 16px;
+    white-space: nowrap;
+    writing-mode: horizontal-tb;
+    box-sizing: border-box;
+}
+
+#taskList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* ===== FINAL FIX: FILTERS STAY IN ONE ROW ===== */
+
+.task-section .task-filters,
+.task-filters {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+}
+
+.task-section .task-filters button,
+.task-filters button {
+    display: inline-flex !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: 75px !important;
+    max-width: none !important;
+    white-space: nowrap !important;
+    writing-mode: horizontal-tb !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+cd ~/Desktop/student_task_manager
+cat >> style.css <<'EOF'
+
+/* Fix: Keep statistic cards stable when task counts change */
+.task-stats {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.task-stats .stat-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 0 !important;
+    height: 110px !important;
+    padding: 12px 8px !important;
+    box-sizing: border-box !important;
+}
+
+.task-stats .stat-card span {
+    display: block !important;
+    min-height: 1.5em !important;
+    line-height: 1.5 !important;
+    font-variant-numeric: tabular-nums !important;
+}
+
+.task-stats .stat-card p {
+    margin: 6px 0 0 !important;
+}
+EOF
+/* FIX: Keep statistics above the growing task list */
+.container > .header {
+    grid-column: 1 / -1 !important;
+    grid-row: 1 !important;
+}
+
+.container > .task-stats {
+    grid-column: 1 / -1 !important;
+    grid-row: 2 !important;
+    align-self: start !important;
+}
+
+.container > .task-box {
+    grid-column: 1 !important;
+    grid-row: 3 !important;
+}
+
+.container > .task-section {
+    grid-column: 2 !important;
+    grid-row: 3 !important;
+}
+
+/* Mobile layout */
+@media (max-width: 760px) {
+    .container > .header {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+    }
+
+    .container > .task-stats {
+        grid-column: 1 !important;
+        grid-row: 2 !important;
+    }
+
+    .container > .task-box {
+        grid-column: 1 !important;
+        grid-row: 3 !important;
+    }
+
+    .container > .task-section {
+        grid-column: 1 !important;
+        grid-row: 4 !important;
+    }
+}
